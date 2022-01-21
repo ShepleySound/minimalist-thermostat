@@ -32,7 +32,15 @@ const plugins = [
 
 export default [
   {
-    input: 'src/boilerplate-card.ts',
+    input: 'src/obvious-thermostat.ts',
+    output: {
+      dir: 'dist',
+      format: 'es',
+    },
+    plugins: [...plugins],
+  },
+  {
+    input: 'src/custom-climate-control/custom-climate.ts',
     output: {
       dir: 'dist',
       format: 'es',

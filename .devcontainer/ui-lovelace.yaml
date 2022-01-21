@@ -1,9 +1,7 @@
 resources:
-  - url: http://127.0.0.1:5000/boilerplate-card.js
+  - url: http://10.0.0.234:5000/obvious-thermostat.js
     type: module
 views:
   - cards:
-      - type: custom:boilerplate-card
-        name: Boilerplate Card Development
-        entity: sun.sun
-        test_gui: true
+      - type: custom:obvious-thermostat
+        name: Obvious Thermostat

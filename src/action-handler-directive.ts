@@ -1,10 +1,21 @@
 import { noChange } from 'lit';
-import { AttributePart, directive, Directive, DirectiveParameters } from 'lit/directive';
+import {
+  AttributePart,
+  directive,
+  Directive,
+  DirectiveParameters,
+} from 'lit/directive';
 
-import { ActionHandlerDetail, ActionHandlerOptions } from 'custom-card-helpers/dist/types';
+import {
+  ActionHandlerDetail,
+  ActionHandlerOptions,
+} from 'custom-card-helpers/dist/types';
 import { fireEvent } from 'custom-card-helpers';
 
-const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.maxTouchPoints > 0;
+const isTouch =
+  'ontouchstart' in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
 
 interface ActionHandler extends HTMLElement {
   holdTime: number;
@@ -50,7 +61,15 @@ class ActionHandler extends HTMLElement implements ActionHandler {
     this.appendChild(this.ripple);
     this.ripple.primary = true;
 
-    ['touchcancel', 'mouseout', 'mouseup', 'touchmove', 'mousewheel', 'wheel', 'scroll'].forEach(ev => {
+    [
+      'touchcancel',
+      'mouseout',
+      'mouseup',
+      'touchmove',
+      'mousewheel',
+      'wheel',
+      'scroll',
+    ].forEach(ev => {
       document.addEventListener(
         ev,
         () => {
@@ -103,7 +122,10 @@ class ActionHandler extends HTMLElement implements ActionHandler {
     const end = (ev: Event): void => {
       // Prevent mouse event if touch event
       ev.preventDefault();
-      if (['touchend', 'touchcancel'].includes(ev.type) && this.timer === undefined) {
+      if (
+        ['touchend', 'touchcancel'].includes(ev.type) &&
+        this.timer === undefined
+      ) {
         return;
       }
       clearTimeout(this.timer);
@@ -112,7 +134,10 @@ class ActionHandler extends HTMLElement implements ActionHandler {
       if (this.held) {
         fireEvent(element, 'action', { action: 'hold' });
       } else if (options.hasDoubleClick) {
-        if ((ev.type === 'click' && (ev as MouseEvent).detail < 2) || !this.dblClickTimeout) {
+        if (
+          (ev.type === 'click' && (ev as MouseEvent).detail < 2) ||
+          !this.dblClickTimeout
+        ) {
           this.dblClickTimeout = window.setTimeout(() => {
             this.dblClickTimeout = undefined;
             fireEvent(element, 'action', { action: 'tap' });
@@ -163,21 +188,28 @@ class ActionHandler extends HTMLElement implements ActionHandler {
 }
 
 // TODO You need to replace all instances of "action-handler-boilerplate" with "action-handler-<your card name>"
-customElements.define('action-handler-boilerplate', ActionHandler);
+customElements.define('action-handler-customthermostat', ActionHandler);
 
 const getActionHandler = (): ActionHandler => {
   const body = document.body;
-  if (body.querySelector('action-handler-boilerplate')) {
-    return body.querySelector('action-handler-boilerplate') as ActionHandler;
+  if (body.querySelector('action-handler-customthermostat')) {
+    return body.querySelector(
+      'action-handler-customthermostat',
+    ) as ActionHandler;
   }
 
-  const actionhandler = document.createElement('action-handler-boilerplate');
+  const actionhandler = document.createElement(
+    'action-handler-customthermostat',
+  );
   body.appendChild(actionhandler);
 
   return actionhandler as ActionHandler;
 };
 
-export const actionHandlerBind = (element: ActionHandlerElement, options?: ActionHandlerOptions): void => {
+export const actionHandlerBind = (
+  element: ActionHandlerElement,
+  options?: ActionHandlerOptions,
+): void => {
   const actionhandler: ActionHandler = getActionHandler();
   if (!actionhandler) {
     return;
