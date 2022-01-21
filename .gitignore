@@ -4,3 +4,4 @@
 .prettierrc.js
 .eslintrc.js
 .vscode/
+src/action-handler-directive.ts

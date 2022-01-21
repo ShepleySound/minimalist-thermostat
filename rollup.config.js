@@ -39,12 +39,12 @@ export default [
     },
     plugins: [...plugins],
   },
-  {
-    input: 'src/custom-climate-control/custom-climate.ts',
-    output: {
-      dir: 'dist',
-      format: 'es',
-    },
-    plugins: [...plugins],
-  },
+  // {
+  //   input: 'src/custom-climate-control/custom-climate.ts',
+  //   output: {
+  //     dir: 'dist',
+  //     format: 'es',
+  //   },
+  //   plugins: [...plugins],
+  // },
 ];
