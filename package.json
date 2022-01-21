@@ -11,8 +11,8 @@
     "custom-cards"
   ],
   "module": "obvious-thermostat.js",
-  "repository": "git@github.com:custom_cards/obvious-thermostat.git",
-  "author": "Ian Richardson <iantrich@gmail.com>",
+  "repository": "git@github.com:shepleysound/obvious-thermostat.git",
+  "author": "Robert Shepley <shepleysound@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "custom-card-helpers": "^1.7.2",
@@ -24,7 +24,6 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-decorators": "^7.14.5",
     "@rollup/plugin-json": "^4.1.0",
-    "@types/lodash/debounce": "^4.14.178",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
