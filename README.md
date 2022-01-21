@@ -1,4 +1,4 @@
-# Obvious Thermostate by [@ShepleySound](https://www.github.com/shepleysound)
+# Obvious Thermostat by [@ShepleySound](https://www.github.com/shepleysound)
 
 A super-simple thermostat for Home Assistant's Lovelace. The goal is to create a thermostat interface that clearly shows both current and target temperatures. This style of display works particularly well in tablet-mounted applications, when the status of a climate device may want to be viewed from a distance.
 
@@ -23,7 +23,7 @@ A super-simple thermostat for Home Assistant's Lovelace. The goal is to create a
 
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/shepleysound/obvious-thermostat?style=for-the-badge
-[commits]: https://github.com/shepleysound/obvious-thermostat/commits/master
+[commits]: https://github.com/shepleysound/obvious-thermostat/commits/main
 [license-shield]: https://img.shields.io/github/license/shepleysound/obvious-thermostat?style=for-the-badge
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge
 [version-shield]: https://img.shields.io/github/package-json/v/shepleysound/obvious-thermostat?style=for-the-badge

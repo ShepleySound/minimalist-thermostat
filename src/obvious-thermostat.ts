@@ -35,7 +35,7 @@ console.info(
 (window as any).customCards.push({
   type: 'obvious-thermostat',
   name: 'Obvious Thermostat',
-  description: 'A large-text T-REX for Home Assistant\'s Lovelace UI.',
+  description: 'A large-text Thermostat for Home Assistant\'s Lovelace UI.',
 });
 
 @customElement('obvious-thermostat')
