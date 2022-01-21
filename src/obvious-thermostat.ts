@@ -34,8 +34,8 @@ console.info(
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
   type: 'obvious-thermostat',
-  name: 'Custom Thermostat',
-  description: 'A template custom card for you to create something awesome',
+  name: 'Obvious Thermostat',
+  description: 'A large-text thermostat for Home Assistant\'s Lovelace UI.',
 });
 
 @customElement('obvious-thermostat')
