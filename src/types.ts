@@ -11,7 +11,7 @@ import {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'obvious-thermostat-editor': LovelaceCardEditor;
+    'minimalist-thermostat-editor': LovelaceCardEditor;
     'hui-error-card': LovelaceCard;
   }
 }

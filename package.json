@@ -1,5 +1,5 @@
 {
-  "name": "obvious-thermostat",
+  "name": "minimalist-thermostat",
   "version": "1.0.0",
   "description": "A large-text thermostat for Home Assistant's Lovelace UI.",
   "keywords": [
@@ -10,8 +10,8 @@
     "lovelace",
     "custom-cards"
   ],
-  "module": "obvious-thermostat.js",
-  "repository": "git@github.com:shepleysound/obvious-thermostat.git",
+  "module": "minimalist-thermostat.js",
+  "repository": "git@github.com:shepleysound/minimalist-thermostat.git",
   "author": "Robert Shepley <shepleysound@gmail.com>",
   "license": "MIT",
   "dependencies": {

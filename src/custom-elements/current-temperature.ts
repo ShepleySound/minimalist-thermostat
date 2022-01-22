@@ -28,13 +28,13 @@ export class CurrentTemperature extends LitElement {
         justify-content: center;
       }
       .temp-header {
-        font-size: var(--ct-temp-header-font-size, 2em);
+        font-size: var(--mt-temp-header-font-size, 2em);
         color: var(--secondary-text-color);
-        margin-bottom: var(--ct-header-margin-bottom);
+        margin-bottom: var(--mt-temp-header-margin-bottom);
       }
       .current-wrapper {
         display: flex;
-        font-size: var(--ct-number-font-size, 4em);
+        font-size: var(--mt-number-font-size, 4em);
         width: auto;
         padding: 12px;
         align-items: center;
@@ -44,7 +44,7 @@ export class CurrentTemperature extends LitElement {
         line-height: 1;
       }
       .current-wrapper .unit {
-        font-size: var(--ct-unit-font-size, 0.5em);
+        font-size: var(--mt-unit-font-size, 0.5em);
         line-height: 1;
       }
     `;

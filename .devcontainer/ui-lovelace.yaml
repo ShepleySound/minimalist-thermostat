@@ -1,7 +1,7 @@
 resources:
-  - url: http://10.0.0.234:5000/obvious-thermostat.js
+  - url: http://10.0.0.234:5000/minimalist-thermostat.js
     type: module
 views:
   - cards:
-      - type: custom:obvious-thermostat
-        name: Obvious Thermostat
+      - type: custom:minimalist-thermostat
+        name: Minimalist Thermostat

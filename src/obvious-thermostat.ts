@@ -25,7 +25,7 @@ import './custom-elements/current-temperature';
 
 /* eslint no-console: 0 */
 console.info(
-  `%c  obvious-thermostat \n%c  ${localize('common.version')} ${CARD_VERSION}    `,
+  `%c  minimalist-thermostat \n%c  ${localize('common.version')} ${CARD_VERSION}    `,
   'color: orange; font-weight: bold; background: black',
   'color: white; font-weight: bold; background: dimgray',
 );
@@ -33,15 +33,15 @@ console.info(
 // Places card into the UI card picker dialog
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: 'obvious-thermostat',
-  name: 'Obvious Thermostat',
+  type: 'minimalist-thermostat',
+  name: 'Minimalist Thermostat',
   description: 'A large-text Thermostat for Home Assistant\'s Lovelace UI.',
 });
 
-@customElement('obvious-thermostat')
+@customElement('minimalist-thermostat')
 export class BoilerplateCard extends LitElement {
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
-    return document.createElement('obvious-thermostat-editor');
+    return document.createElement('minimalist-thermostat-editor');
   }
 
   public static getStubConfig(): object {
@@ -212,7 +212,7 @@ export class BoilerplateCard extends LitElement {
       font-weight: normal;
       padding: 12px;
       line-height: 1;
-      font-size: var(--ct-header-font-size, 24px);
+      font-size: var(--mt-header-font-size, 24px);
     }
 
 

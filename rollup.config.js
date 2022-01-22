@@ -33,7 +33,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/obvious-thermostat.ts',
+    input: 'src/minimalist-thermostat.ts',
     output: {
       dir: 'dist',
       format: 'es',

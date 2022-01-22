@@ -86,9 +86,9 @@ export class CustomClimateControl extends LitElement {
         justify-content: center;
       }
       .temp-header {
-        font-size: var(--ct-temp-header-font-size, 2em);
+        font-size: var(--mt-temp-header-font-size, 2em);
         color: var(--secondary-text-color);
-        margin-bottom: var(--ct-header-margin-bottom);
+        margin-bottom: var(--mt-temp-header-margin-bottom);
       }
       .control-center {
         display: flex;
@@ -102,7 +102,7 @@ export class CustomClimateControl extends LitElement {
       }
 
       #target-temperature {
-        font-size: var(--ct-number-font-size, 4em);
+        font-size: var(--mt-number-font-size, 4em);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -112,12 +112,16 @@ export class CustomClimateControl extends LitElement {
         line-height: 1;
       }
       #target-temperature .unit {
-        font-size: var(--ct-unit-font-size, 0.5em);
+        font-size: var(--mt-unit-font-size, 0.5em);
         line-height: 1;
       }
 
-      ha-icon-button {
-        margin: var(--ct-target-button-spacing, 2px);
+      ha-icon-button.up {
+        margin-left: var(--mt-target-button-spacing, 2px);
+      }
+
+      ha-icon-button.down {
+        margin-right: var(--mt-target-button-spacing, 2px);
       }
 
       ha-icon {

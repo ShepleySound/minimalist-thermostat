@@ -11,7 +11,7 @@ import {
 import { BoilerplateCardConfig } from './types';
 import { customElement, property, state } from 'lit/decorators';
 
-@customElement('obvious-thermostat-editor')
+@customElement('minimalist-thermostat-editor')
 export class BoilerplateCardEditor extends LitElement
   implements LovelaceCardEditor {
   @property({ attribute: false }) public hass?: HomeAssistant;

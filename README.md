@@ -7,11 +7,8 @@ A super-simple thermostat for Home Assistant's Lovelace. The goal is to create a
 [![hacs_badge][hacs-shield]](https://github.com/hacs/integration)
 [![GitHub Activity][commits-shield]][commits]
 
-![Fullscreen Example](./images/Fullscreen-Dark.png)
-<br><br>
-![Multiple Example](./images/Multiple-Dark.png)
-
 ## Installation
+
 1. In Home Assistant, make sure you have HACS installed.
 2. In HACS, go to the "frontend" section
 3. Select "Custom Repositories"
@@ -20,6 +17,56 @@ A super-simple thermostat for Home Assistant's Lovelace. The goal is to create a
 6. Click the "Add" Button.
 7. The plugin should appear as a new repository. Click the "Download" button.
 8. Reload your browser.
+9. Add to resources:
+
+```yaml
+url: /hacsfiles/obvious-thermostat/obvious-thermostat.js
+type: module
+```
+
+---
+
+## Examples
+
+### Default Configuration
+
+![Multiple Example](./images/Multiple-Dark.png)
+
+### Panel Configuration (Using Card-Mod)
+
+![Fullscreen Example](./images/Fullscreen-Dark.png)
+
+# CSS Variables
+
+---
+
+This card uses the following CSS variables:
+You can configure these globally using a Lovelace theme or on each card individually using [Card-Mod](https://github.com/thomasloven/lovelace-card-mod).
+
+| Variable Name                  | Default Value | Use                                                                                       |
+|--------------------------------|---------------|-------------------------------------------------------------------------------------------|
+| --ot-header-font-size          | 24px          | Set the font size of the card's title header.                                             |
+| --ot-temp-header-font-size     | 2em           | Set the font size of the "Current" and "Target" temperature headers.                      |
+| --ot-temp-header-margin-bottom | 0px           | Set the margin between the temperature headers and their numeric values.                  |
+| --ot-number-font-size          | 4em           | Set the font size of the temperature numeric values.                                      |
+| --ot-unit-font-size            | 0.5em         | Set the font size of the temperature unit.                                                |
+| --ot-target-button-spacing     | 2px           | Set the spacing between the temperature control buttons and the target temperature value. |
+
+### Full-Screen Panel Configuration (Card-Mod)
+
+```yaml
+panel: true
+style: |
+  ha-card {
+  --ot-header-font-size: 2em;
+  --ot-number-font-size: 12vmax;
+  --ot-temp-header-font-size: 2em;
+  --ot-header-margin-bottom: 24px;
+  }
+```
+
+## To-do
+
 
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/shepleysound/obvious-thermostat?style=for-the-badge
