@@ -1,4 +1,4 @@
-# Minimalist Thermostat by [@ShepleySound](https://www.github.com/shepleysound)
+# Minimalist Thermostat
 
 A super-simple thermostat for Home Assistant's Lovelace. The goal is to create a thermostat interface that clearly shows both current and target temperatures. This style of display works particularly well in tablet-mounted applications, when the status of a climate device may want to be viewed from a distance.
 
